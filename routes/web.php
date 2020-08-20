@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('home', 'HomeController@index')->middleware('auth');
 
 Route::get('/', "ProdutoController@lista");
 Route::get('/produtos/novo', "ProdutoController@novo");
@@ -24,7 +25,6 @@ Route::get('/produtos/mostra/{id}', "ProdutoController@mostra")->where('id', '[0
 Route::get('produtos/remove/{id}', 'ProdutoController@remove');
 
 
-// Route::controllers([
-//     'auth' => 'Auth\AuthController',
-//     'password' => 'Auth\PasswordController'
-// ]);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

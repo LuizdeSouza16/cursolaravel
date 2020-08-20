@@ -29,4 +29,16 @@ class ProdutoRequest extends FormRequest
             'valor'     => 'required|numeric'
         ];
     }
+
+    /**
+     * Get the messages to form .
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'required' => 'The :attribute filed can not be empty',
+        ];   
+    }
 }

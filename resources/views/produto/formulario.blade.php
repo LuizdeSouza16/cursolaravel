@@ -15,19 +15,19 @@
         @csrf
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input name="nome" class="form-control">
+            <input value="{{ old('nome')}}" name="nome" class="form-control">
         </div>
         <div class="form-group">
             <label for="descricao">Descrição</label>
-            <input name="descricao" class="form-control">
+            <input value="{{ old('descricao')}}" name="descricao" class="form-control">
         </div>
         <div class="form-group">
             <label for="valoe">Valor</label>
-            <input name="valor" class="form-control">
+            <input value="{{ old('valor')}}" name="valor" class="form-control">
         </div>
         <div class="form-group">
             <label for="quantidade">Quantidade</label>
-            <input name="quantidade" class="form-control" type="number">
+            <input value="{{ old('quantidade')}}" name="quantidade" class="form-control" type="number">
         </div>
         <input type="submit" class="btn btn-primary" value="Enviar">
     </form>
